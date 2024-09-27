@@ -16,10 +16,10 @@ export default function Register() {
        
         async function logs(e) {
           e.preventDefault();  
-         axios.post('http://localhost:3001/register', {name,email,password,number})
+         axios.post('https://backkkkkkendd-1.onrender.com/register', {name,email,password,number})
          .then(result => console.log(result))
          .catch(err=> console.log(err))
-         window.location.assign('/login'); 
+         window.location.assign('/login');   
 
         }
       

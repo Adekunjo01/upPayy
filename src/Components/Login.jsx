@@ -9,7 +9,7 @@ export default function Login() {
 
         async function logs(e) {
           e.preventDefault();  
-          let result = await fetch("http://localhost:3001/login", {
+          let result = await fetch("https://backkkkkkendd-1.onrender.com/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
