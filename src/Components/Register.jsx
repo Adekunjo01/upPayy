@@ -14,14 +14,17 @@ export default function Register() {
 
 
        
-        async function logs(e) {
-          e.preventDefault();  
-         axios.post('https://backkkkkkendd-1.onrender.com/register', {name,email,password,number})
-         .then(result => console.log(result))
-         .catch(err=> console.log(err))
-         window.location.assign('/login');   
-
+      async function logs(e) {
+        e.preventDefault();  
+        try {
+          const result = await axios.post('https://backkkkkkendd-1.onrender.com/register', {name, email, password, number});
+          console.log(result);
+          window.location.assign('/login');   
+        } catch (err) {
+          console.log(err);
         }
+      }
+      
       
   return (
 
